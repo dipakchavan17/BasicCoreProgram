@@ -8,41 +8,25 @@ namespace BasicCoreProgram
 {
     internal class BasicPrograms
     {
-        public const int HEAD = 0;
-        public const int TAIL = 1;
-        public void checkHeadOrTailPercentage()
+        public void checkLeapOrNot()
         {
-            double percentageOfHead, percentageOfTail;
-            int headCount = 0, tailCount = 0;
-            Console.WriteLine("Enter the number of times coin should be tossed: ");
-            int N = Convert.ToInt32(Console.ReadLine());
-            int i = 0;
-            while (i != N)
+            string a1;
+            int year;
+            Console.WriteLine("Enter a Year which must be of 4 digits : ");
+
+            a1 = Console.ReadLine();
+            year = Convert.ToInt32(a1);
+
+            if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
             {
-                Random random = new Random();
-                int tossCheck = random.Next(0, 2);
-                if (tossCheck == HEAD)
-                {
-                    headCount++;
-                }
-                else
-                {
-                    tailCount++;
-                }
-                i++;
+                Console.WriteLine(year + " is a leap year.");
             }
-
-            Console.WriteLine("Total number of Tail occour: " + tailCount);
-            Console.WriteLine("Total number of Head occour: " + headCount);
-
-            percentageOfHead = (double)headCount / N * 100;
-            percentageOfTail = (double)tailCount / N * 100;
-
-            Console.WriteLine("Percentage of Tail : " + percentageOfTail);
-            Console.WriteLine("Percentage of Head : " + percentageOfHead);
+            else
+            {
+                Console.WriteLine(year + " is not a leap year.");
+            }
         }
     }
 }
-
     
 
