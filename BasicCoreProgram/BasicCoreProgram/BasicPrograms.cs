@@ -8,27 +8,21 @@ namespace BasicCoreProgram
 {
     internal class BasicPrograms
     {
-
-        public void powerOf2()
+        public void harmonicSeries()
         {
-            int power, result = 1;
-            string N;
-            Console.WriteLine("Enter the power of 2 : ");
-            N = Console.ReadLine();
-            power = Convert.ToInt32(N);
-            if (power < 31 && power >= 0)
+            int i, N;
+            double s = 0.0;
+
+            Console.Write("Calculate the harmonic series and their sum:\n ");
+            Console.Write("Input the number of terms : ");
+            N = Convert.ToInt32(Console.ReadLine());
+            for (i = 1; i <= N; i++)
             {
-                while (power != 0)
-                {
-                    result = result * 2;
-                    --power;
-                }
-                Console.WriteLine("Answer = " + result);
+                Console.Write("1/" + i + "+");
+                s += 1 / (float)i;
             }
-            else
-            {
-                Console.WriteLine("Wrong input will over flow int");
-            }
+            Console.Write("\nSum of Series upto " + N + "terms : " + s + "\n");
+
         }
     }
 }
