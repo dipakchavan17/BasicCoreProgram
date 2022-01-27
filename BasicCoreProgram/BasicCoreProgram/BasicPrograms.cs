@@ -8,22 +8,26 @@ namespace BasicCoreProgram
 {
     internal class BasicPrograms
     {
-        public void checkLeapOrNot()
+
+        public void powerOf2()
         {
-            string a1;
-            int year;
-            Console.WriteLine("Enter a Year which must be of 4 digits : ");
-
-            a1 = Console.ReadLine();
-            year = Convert.ToInt32(a1);
-
-            if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
+            int power, result = 1;
+            string N;
+            Console.WriteLine("Enter the power of 2 : ");
+            N = Console.ReadLine();
+            power = Convert.ToInt32(N);
+            if (power < 31 && power >= 0)
             {
-                Console.WriteLine(year + " is a leap year.");
+                while (power != 0)
+                {
+                    result = result * 2;
+                    --power;
+                }
+                Console.WriteLine("Answer = " + result);
             }
             else
             {
-                Console.WriteLine(year + " is not a leap year.");
+                Console.WriteLine("Wrong input will over flow int");
             }
         }
     }
