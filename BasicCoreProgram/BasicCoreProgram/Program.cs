@@ -11,6 +11,8 @@ namespace BasicCoreProgram
         static void Main(string[] args)
         {
             Console.WriteLine("welcome to basic core programs");
+            BasicPrograms basicPrograms = new BasicPrograms();
+            basicPrograms.checkHeadOrTailPercentage();
             Console.ReadLine();
         }
     }
