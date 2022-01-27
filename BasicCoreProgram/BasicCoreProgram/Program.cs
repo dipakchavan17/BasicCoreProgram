@@ -12,7 +12,8 @@ namespace BasicCoreProgram
         {
             Console.WriteLine("welcome to basic core programs");
             BasicPrograms basicPrograms = new BasicPrograms();
-            basicPrograms.harmonicSeries();
+            basicPrograms.Factorization(24);
+
             Console.ReadLine();
         }
     }

@@ -8,21 +8,28 @@ namespace BasicCoreProgram
 {
     internal class BasicPrograms
     {
-        public void harmonicSeries()
+        public void Factorization(int num)
         {
-            int i, N;
-            double s = 0.0;
-
-            Console.Write("Calculate the harmonic series and their sum:\n ");
-            Console.Write("Input the number of terms : ");
-            N = Convert.ToInt32(Console.ReadLine());
-            for (i = 1; i <= N; i++)
+            Console.WriteLine("Enter the number");
+            for (int i = 2; i <= num; i++)
             {
-                Console.Write("1/" + i + "+");
-                s += 1 / (float)i;
+                if (num % i == 0)
+                {
+                    int isprime = 1;
+                    for (int j = 2; j <= i / 2; j++)
+                    {
+                        if (i % j == 0)
+                        {
+                            isprime = 0;
+                            break;
+                        }
+                    }
+                    if (isprime == 1)
+                    {
+                        Console.WriteLine(i);
+                    }
+                }
             }
-            Console.Write("\nSum of Series upto " + N + "terms : " + s + "\n");
-
         }
     }
 }
