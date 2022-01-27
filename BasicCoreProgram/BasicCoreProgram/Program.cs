@@ -12,7 +12,7 @@ namespace BasicCoreProgram
         {
             Console.WriteLine("welcome to basic core programs");
             BasicPrograms basicPrograms = new BasicPrograms();
-            basicPrograms.checkEvenOrOdd();
+            basicPrograms.checkVowelOrNot();
 
             Console.ReadLine();
         }
